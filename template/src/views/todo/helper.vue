@@ -1,6 +1,6 @@
 <template>
   <div class="helper">
-    <span class="left">{{unFinishedTodoLength}} items left</span>
+    <span class="left">\{{unFinishedTodoLength}} items left</span>
     <span class="clear" @click="clearAllCompleted">Clear Completed</span>
   </div>
 </template>

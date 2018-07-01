@@ -6,7 +6,7 @@
       :checked="todo.completed"
       @click="handleToggle"
     >
-    <label>{{todo.content}}</label>
+    <label>\{{todo.content}}</label>
     <button class="destory" @click="deleteTodo"></button>
   </div>
 </template>

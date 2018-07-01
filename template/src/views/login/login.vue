@@ -3,7 +3,7 @@
     <h1>
       <span>Login</span>
       <i class="icon-shenfenzheng"></i>
-      <span class="error-msg" v-show="errorMsg">{{errorMsg}}</span>
+      <span class="error-msg" v-show="errorMsg">\{{errorMsg}}</span>
     </h1>
     <input
       type="text"

@@ -7,8 +7,8 @@
       @mouseenter="clearTimer"
       @mouseleave="createTimer"
     >
-      <span class="content">{{content}}</span>
-      <a class="btn" @click="handleClose">{{btn}}</a>
+      <span class="content">\{{content}}</span>
+      <a class="btn" @click="handleClose">\{{btn}}</a>
     </div>
   </transition>
 </template>
