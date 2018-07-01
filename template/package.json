@@ -1,24 +1,70 @@
 {
   "name": "{{ name }}",
+  "version": "1.0.0",
   "description": "{{ description }}",
-  "author": "{{ author }}",
-  "private": true,
+  "main": "src/main.js",
   "scripts": {
-    "dev": "webpack-dev-server --inline --hot",
-    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --config build/webpack.config.dev.js",
+    "build": "npm run clean && cross-env NODE_ENV=production webpack --config build/webpack.config.prod.js",
+    "clean": "rimraf dist",
+    "lint": "eslint --ext .js --ext .vue src/",
+    "lint-fix": "eslint --fix --ext .js --ext .vue src/",
+    "precommit": "npm run lint-fix"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hellobeifeng/vue-starter-kit.git"
+  },
+  "author": "{{ author }}",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hellobeifeng/vue-starter-kit/issues"
+  },
+  "homepage": "https://github.com/hellobeifeng/vue-starter-kit#readme",
   "dependencies": {
-    "vue": "^2.0.0-alpha.2"
+    "axios": "^0.17.1",
+    "ejs": "^2.5.7",
+    "express": "^4.16.3",
+    "vue": "2.5.13",
+    "vue-router": "^3.0.1",
+    "vuex": "^3.0.1"
   },
   "devDependencies": {
-    "babel-core": "^6.0.0",
-    "babel-loader": "^6.0.0",
-    "babel-preset-es2015": "^6.0.0",
-    "cross-env": "^1.0.6",
-    "css-loader": "^0.23.1",
-    "file-loader": "^0.8.4",
-    "vue-loader": "^9.0.0",
-    "webpack": "^1.12.2",
-    "webpack-dev-server": "^1.12.0"
+    "autoprefixer": "7.2.3",
+    "babel-core": "6.26.0",
+    "babel-eslint": "^8.2.1",
+    "babel-helper-vue-jsx-merge-props": "2.0.3",
+    "babel-loader": "7.1.2",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "babel-plugin-syntax-jsx": "6.18.0",
+    "babel-plugin-transform-vue-jsx": "3.5.0",
+    "babel-preset-env": "1.6.1",
+    "babel-preset-stage-1": "^6.24.1",
+    "cross-env": "5.1.3",
+    "css-loader": "0.28.7",
+    "eslint": "^4.16.0",
+    "eslint-config-standard": "^11.0.0-beta.0",
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-html": "^4.0.1",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "extract-text-webpack-plugin": "3.0.2",
+    "file-loader": "1.1.6",
+    "html-webpack-plugin": "2.30.1",
+    "husky": "^0.14.3",
+    "postcss-loader": "2.0.9",
+    "rimraf": "^2.6.2",
+    "style-loader": "0.19.1",
+    "stylus": "0.54.5",
+    "stylus-loader": "3.0.1",
+    "url-loader": "0.6.2",
+    "vue-loader": "13.6.0",
+    "vue-style-loader": "^3.0.3",
+    "vue-template-compiler": "2.5.13",
+    "webpack": "3.10.0",
+    "webpack-dev-server": "2.9.7",
+    "webpack-merge": "^4.1.1"
   }
 }
