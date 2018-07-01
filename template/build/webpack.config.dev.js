@@ -57,8 +57,7 @@ let config = merge(baseConfig, {
     new HTMLPlugin({
       title: 'vue 脚手架dd ',
       template: path.join(__dirname, 'template.html'),
-      inject: true,
-      favicon:'./favicon.ico'
+      inject: true
     }),
     new webpack.HotModuleReplacementPlugin(), // 只能在开发环境使用 和 hot配套使用
     new webpack.NoEmitOnErrorsPlugin()
