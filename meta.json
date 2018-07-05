@@ -3,7 +3,7 @@
     "name": {
       "type": "string",
       "required": true,
-      "label": "Project name"
+      "label": "Project name "
     },
     "description": {
       "type": "string",
